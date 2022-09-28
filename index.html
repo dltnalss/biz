@@ -1,20 +1,84 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko"> <!--/하고 탭-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>안녕하세요. 이수민입니다.</title>
+    <meta name="keywords" content="ga, IT관련블로그, 경영정보">
+    <meta name="author" content="Leesumin">
+    <title>Document</title>
 </head>
 <body>
-    <h1>20201202 이수민 Profile</h1>
-    <h2>동의대학교 경영정보학과</h2>
-    1. 데이터분석 : GA로 이용한 데이터기반 의사결정 능력 <br>
-    2. 서비스기획 : 환경분석 및 웹서비스 기획 능력 <br>
-    3. 머신 러닝 : 머신러닝 알고리즘 이해도화 빅데이터 분석 능력 <br>
-    <hr>
-    <h3> 취미</h3>
-    1. 캘리그라피<br>
-    2. 현대미술사 공부 <br>
+    <header>
+        <img src="./images/logo.jpg" alt="CI">
+        <h1> Sumin site </h1>
+    </header>
+    <nav>
+        <ul> <!--ul>li*4{메인메뉴$$}-->
+            <li>소개</li>
+            <li>쇼핑</li>
+            <li>패키지</li>
+            <li>커뮤니티</li>
+        </ul>  
+    </nav>
+    <section>
+        <article>
+        <div class="bigdata">   <!--id 이름이 유일(#) class 이름이 동일해도 상관없음(.)/점두개 상위폴더 점하나 하위폴더-->
+          <img src="./images/bigdata.jpg" alt="메인이미지" width="25%">
+        </div>
+        <div class="action">  <!--.action>h2 tab버튼-->
+            <h2>나의 대외활동 이력</h2>
+            <table border="1">
+                <tr>
+                    <th>기간</th>
+                    <th>대외활동내용</th>
+                    <th>주최</th>
+                </tr>
+                <tr>
+                    <td>2021.3.</td>
+                    <td>마케팅경진대회</td>
+                    <td>정보학회</td>
+                </tr>
+                <tr>
+                    <td>2022.5.</td>
+                    <td>GA 교육프로그램</td>
+                    <td>동의대학교</td>
+                </tr>
+                <tr>
+                    <td>2022.8.</td>
+                    <td>온라인쇼핑물방문</td>
+                    <td>중소기업장</td>
+                </tr>
+            </table>
+          
+            </table>
+        </div>
+        
+
+        </article>
+        <article>
+            <div class="media">
+                <h2>좋아하는 음악</h2>    
+                <audio src="./media/music01.mp3" controls></audio>
+                <h2>북극곰 한강을 살리자</h2>
+                <video src="./media/movie.mp4" controls width="50%"></video>
+                <h2>아웃토반</h2> <!-- 소스코드 복사 붙여넣기 -->
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/YfVE5wSuBSU" title="아우토반 달린 백만장자의 417km/h 질주! 독일 교통부가 경고했다!!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </article>
+        <article>
+            <div class="gallery"> <!--".하고 탭키"-->
+                <iframe width="70%" height="400" src="./gallery.html" frameborder="0"></iframe>
+            </div>
+        </article>
+        <aside>
+            <div class="link"> <!-- a*3 하고 tab a는 inline 형식 br탭은 줄 바꾸기-->
+                <a href="http://mis.deu.ac.kr">경영정보학과 사이트</a> <br>
+                <a href="./gallery.html">갤러리</a> <br>
+                <a href=""></a>
+            </div>
+        </aside>
+    </section>
+    <footer>저작권과 주소</footer>
 </body>
 </html>
