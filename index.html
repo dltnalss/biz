@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="ko"> <!--/하고 탭-->
-<head><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MNDKH72Y6E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MNDKH72Y6E');
-</script>
+<head><!-- Google tag (gtag.js) 추적코드 붙여넣기-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNDKH72Y6E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-MNDKH72Y6E');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="ga, IT관련블로그, 경영정보">
     <meta name="author" content="Leesumin">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/8781355144.js" crossorigin="anonymous"></script> <!--아이콘 삽입-->
+    <link rel="stylesheet" href="./css/mystyle.css"> <!--link css 외부스타일 삽입-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body{
+            margin: auto;
+            max-width: 980px;
+        }        
+        section{
+            display: flex; /*flex를 설정하고 flex 줌*/
+        }
+        .content{
+            flex: 4;
+        }
+        aside{
+            flex: 1;
+        }
+        body{
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="./images/logo.jpg" alt="CI">
+    <header id="home"> <!--밑에 있는 a태그 관련-->
+        <i class="fa-solid fa-bars"></i>
         <h1> Sumin site </h1>
     </header>
     <nav>
-        <ul> <!--ul>li*4{메인메뉴$$}-->
-            <li>소개</li>
-            <li>쇼핑</li>
-            <li>패키지</li>
-            <li>커뮤니티</li>
+         <!--ul>li*4>a{메인메뉴$$}-->
+        <ul>
+            <li><a href="../index.html">소개</a></li> <!--점하나는 현재경로-->
+            <li><a href="./shop/computer.html">쇼핑</a></li>
+            <li><a href="./event/event.html">이벤트</a></li>
+            <li><a href="a">커뮤니티</a></li>
+        </ul>
         </ul>  
     </nav>
     <section>
+        <div class="content">
         <article>
         <div class="bigdata">   <!--id 이름이 유일(#) class 이름이 동일해도 상관없음(.)/점두개 상위폴더 점하나 하위폴더-->
-          <img src="./images/bigdata.jpg" alt="메인이미지" width="25%">
+        <img src="./images/bigdata.jpg" class="w3-circle" alt="메인이미지" width="25%">
         </div>
         <div class="action">  <!--.action>h2 tab버튼-->
             <h2>나의 대외활동 이력</h2>
-            <table border="1">
+            <table class="w3-table-all w3-hoverable"> <!--border="1">-->
                 <tr>
                     <th>기간</th>
                     <th>대외활동내용</th>
@@ -79,14 +103,33 @@
                 <iframe width="70%" height="400" src="./gallery.html" frameborder="0"></iframe>
             </div>
         </article>
+        </div>
         <aside>
-            <div class="link"> <!-- a*3 하고 tab a는 inline 형식 br탭은 줄 바꾸기-->
-                <a href="http://mis.deu.ac.kr">경영정보학과 사이트</a> <br>
+        
+            <div class="link"> <!-- a*3 하고 tab a는 inline 형식 br탭은 줄 바꾸기--> <br>
+                <a href="http://mis.deu.ac.kr" target="_blank">경영정보학과 사이트</a> <br><!--target은 누르고 있으면 색 바뀌고 새 창으로 뜬다-->
                 <a href="./gallery.html">갤러리</a> <br>
-                <a href=""></a>
+                <a href="#home">시작 이동</a> <!--#은 아이디 #home은 home으로 이동한다는 뜻 그래서 header에 home 아이디 삽입-->
             </div>
+            <div class="login">
+                <h2> 로그인</h2>
+                <form action="#" method="get"> <!-- get은 정보를 모두 노출 post는 숨기는 것-->
+                    회원ID<input type="text"  class="w3-input" name="id" id=""> <br> <!--input:text tab-->
+                    비밀번호 <input type="password"  class="w3-input" name="pw" id=""> <br> <!--input:password tab--> 
+                    남자 <input type="radio" name="gender" value="1" id=""> <!--input:radio gender value 삽입-->
+                    여자 <input type="radio" name="gender" value="2" id=""> <br>
+                    <input type="submit" class="w3-button w3-black" value="로그인"> <!--input:submit tab--> 
+                    <input type="reset" class="w3-button w3-black" value="재설정"> <!--input:reset tab-->
+                </form>
+                </div>
         </aside>
     </section>
-    <footer>저작권과 주소</footer>
+    <footer>저작권과 주소
+        <div class="sns">
+            <a href="https://blog.naver.com/leesumin0">
+            <i class="fa-brands fa-facebook"></i> 
+            <i class="fa-brands fa-twitter"></i> <!-- i주소 복사 붙여넣기 -->
+        </div>
+    </footer>
 </body>
 </html>
